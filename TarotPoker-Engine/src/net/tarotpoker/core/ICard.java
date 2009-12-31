@@ -33,13 +33,9 @@ public interface ICard {
 	public static final int R_K = 13;
 	public static final int R_A = 14;
 
+	int getRank(Hand hand);
+	
+	int getSuit(Hand hand);
 	
 	
-	public enum Suit {
-		S_CUPS, S_SWORDS, S_WANDS, S_PENTS, S_NONE;
-	}
-	
-	public enum Rank {
-		
-	}
 }
