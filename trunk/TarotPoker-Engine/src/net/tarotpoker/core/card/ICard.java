@@ -1,4 +1,6 @@
-package net.tarotpoker.core;
+package net.tarotpoker.core.card;
+
+import net.tarotpoker.core.Hand;
 
 public interface ICard {
 	/*
@@ -14,11 +16,10 @@ public interface ICard {
 	public static final int S_PENTS = 3;
 	public static final int S_SWORDS = 4;
 	public static final int S_TRUMPS = 5;
+	public static final String SUIT_TOKEN = "NCWPST";
 	
 	// RANKS
-	public static final int R_WILD = -1;
 	public static final int R_NULL = 0;
-	public static final int R_BUG = 1;
 	public static final int R_2 = 2;
 	public static final int R_3 = 3;
 	public static final int R_4 = 4;
@@ -32,10 +33,12 @@ public interface ICard {
 	public static final int R_Q = 12;
 	public static final int R_K = 13;
 	public static final int R_A = 14;
+	public static final int R_WILD = 15;
+	public static final int R_BUG = 16;
+	
+	int getRankValue(Hand hand);
+	
+	int getSuitValue(Hand hand);
 
-	int getRank(Hand hand);
-	
-	int getSuit(Hand hand);
-	
-	
+	String getToken();
 }
